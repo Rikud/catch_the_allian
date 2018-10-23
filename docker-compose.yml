@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+
+  db:
+    restart: always
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    build:
+      context: ./db
+      dockerfile: ./Dockerfile
+
+  back:
+    restart: always
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    build:
+      context: ./back
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db
+
+  front:
+      restart: always
+      expose:
+        - 8000
+      ports:
+        - 8000:80
+      build:
+        context: ./front
+        dockerfile: ./Dockerfile

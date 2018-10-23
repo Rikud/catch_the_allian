@@ -1,0 +1,28 @@
+section.view.choose-side-view
+    header.view__header.view-header
+        div.view-header__home
+            a(href='/')
+        div.view-header__head Choose your side
+        div.view-header__profile
+            include ../../common.blocks/profile-bar/profile-bar.tmpl.pug
+    article
+        div.view__content
+            div.choose-side-view__sides
+                div.choose-side-view__side.choose-side-view__human-side
+                    div(class='choose-side-view__icon choose-side-view__icon_theme-' + theme)
+                    div(class='choose-side-view__side-text choose-side-view__side-text_theme-' + theme)
+                        if theme==='vpn'
+                            | RKN
+                        else
+                            | HUMANS
+                div.choose-side-view__side.choose-side-view__ufo-side
+                    div.choose-side-view__icon
+                        div(class='ship-icon ship-icon_theme-' + theme)
+                    div(class='choose-side-view__side-text choose-side-view__side-text_theme-' + theme)
+                        if theme === 'vpn'
+                            | TELEGRAM
+                        else
+                            | UFO
+
+    footer
+        div.footer__fore

@@ -1,0 +1,54 @@
+$about-border-color: rgb(73, 43, 85);
+$about-box-shadow-color: rgba(66, 6, 90, 0.55);
+
+.about-view__about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 50vmin;
+    height: 50vmin;
+    background-color: rgba(228, 116, 255, 0.4);
+    border-color: $about-border-color;
+    box-shadow: 0 0 1vmin 0.5vmin $about-box-shadow-color;
+
+    margin-top: 10vh;
+
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.3vmin;
+    position: absolute;
+
+    color: whitesmoke;
+    font-size: 5vmin;
+
+    img {
+        margin-top: 2vmin;
+        max-height: 20vmin;
+        max-width: 20vmin;
+        border: 2px black solid;
+    }
+
+    p {
+        text-align: center;
+        font-size: 3vmin;
+    }
+
+    a {
+        color: #fff;
+    }
+}
+
+
+@media only screen
+and (max-device-aspect-ratio: 5/7 ){
+
+    .about-view__about {
+        width: 70vmin;
+        height: 70vmin;
+        font-size: 8vmin;
+        margin-top: 16vh;
+    }
+
+}
